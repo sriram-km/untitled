@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <title>Fountain to HTML</title>
+        <link href="css/viewer.css" type="text/css" rel="stylesheet" />
+        <link href="css/styles.css" type="text/css" rel="stylesheet" />
+        <meta name="theme-color" content="#5d6879" />
+        <link rel="icon" href="images/logo.png" type="image/png">
+    </head>
+    <body>
+
+        <header>
+            <h1 id="title">Untitled Screenplay</h1>
+            <button id="mobile-menu" onclick="toggleMenu();">Menu</button>
+            <nav>
+                <section>
+                    <span id="location-count" title="The amount of different locations used in this script.">0</span> locations,
+                    <span id="dialog-count" title="The amount of people who have dialog in this script.">0</span> speakers,
+                    <span id="word-count" title="The amount of words in the script.">0</span> words,
+                    <span id="scene-count" title="The amount of scenes in the script.">0</span> scenes,
+                    <span id="page-count" title="The amount of pages, including the title page.">0</span> pages
+                </section>
+                <button id="change-view">View</button>
+                <button id="delete-button">Delete</button>
+                <button id="download-file">Download</button>
+                <button onclick="alert('Set printer margins to 0, none or minimal. Best suited for Paper A4 portrait.');window.print();">Print</button>
+                <button id="home-button">Home</button>
+            </nav>
+        </header>
+
+        <div id="editor">
+            <textarea id="fountain" placeholder="Start writing your screenplay in Fountain here..."></textarea>
+        </div>
+        <div id="viewer">
+            <ul id="scenario">
+                <li><p class="message">Start writing your script in Fountain. More info on how to write Fountain can be found here: <a href="https://fountain.io/syntax" target="_blank">fountain.io/syntax</a>.</a></p></li>
+            </ul>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <script type="text/javascript" src="js/display.js"></script>
+        <script type="text/javascript" src="js/parser.js"></script>
+        <script type="text/javascript" src="js/screenplay.js"></script>
+        <script type="text/javascript" src="js/FileSaver.js"></script>
+        <script type="text/javascript" src="js/appwrrite.js"></script>
+        <script type="text/javascript" src="js/editor.js"></script> 
+
+    </body>
+</html>
